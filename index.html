@@ -87,7 +87,7 @@
 <meta name="description" content="Strong opinions, weakly held.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="skydream.Me">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://skydream.me/index.html">
 <meta property="og:site_name" content="skydream.Me">
 <meta property="og:description" content="Strong opinions, weakly held.">
 <meta name="twitter:card" content="summary">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://skydream.me/"/>
 
 
 
@@ -262,7 +262,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/">
+  <link itemprop="mainEntityOfPage" href="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="zzr0427">
@@ -308,7 +308,17 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">Post modified</span>
+              <time title="Post modified" itemprop="dateModified" datetime="2016-12-12T16:32:18+08:00">
+                2016-12-12
+              </time>
             
           </span>
 
@@ -339,8 +349,7 @@
 
       
         
-          <h2 id="fanout-exchange"><a href="#fanout-exchange" class="headerlink" title="fanout exchange"></a>fanout exchange</h2><p>《Ice Bear都能懂的RabbitMQ入门教程（一）》中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不同的consumer进行处理。如下所示：</p>
-<p><img src="/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/two-consumer.png" alt="two-consumer"></p>
+          <h2 id="fanout-exchange"><a href="#fanout-exchange" class="headerlink" title="fanout exchange"></a>fanout exchange</h2><p><a href="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/">《Ice Bear都能懂的RabbitMQ (一) 》</a>中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不同的consumer进行处理。
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/#more" rel="contents">
@@ -384,7 +393,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/">
+  <link itemprop="mainEntityOfPage" href="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="zzr0427">
@@ -430,7 +439,17 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">Post modified</span>
+              <time title="Post modified" itemprop="dateModified" datetime="2016-12-12T16:32:53+08:00">
+                2016-12-12
+              </time>
             
           </span>
 
@@ -462,14 +481,6 @@
       
         
           <p>在Openstack中，各个组件内部使用消息队列进行通信，其中，RabbitMQ是常用的一种开源消息代理软件。这里作一个简要介绍。</p>
-<h2 id="RabbitMQ介绍"><a href="#RabbitMQ介绍" class="headerlink" title="RabbitMQ介绍"></a>RabbitMQ介绍</h2><p>RabbitMQ实现了高级消息队列协议（AMQP）。</p>
-<h3 id="AMQP"><a href="#AMQP" class="headerlink" title="AMQP"></a>AMQP</h3><p>AMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨在解决在两个应用之间传送消息存在的以下问题:</p>
-<ul>
-<li>网络是不可靠的 -&gt; 消息需要保存后再转发并有出错处理机制</li>
-<li>与本地调用相比，网络速度慢 -&gt; 得支持异步调用</li>
-<li>应用之间是不同的(比如实现语言不同, 操作系统不同)，且应用会经常变化 -&gt; 得与应用无关</li>
-</ul>
-<p>AMQP 使用异步的、应用对应用的、二进制数据通信来解决这些问题。</p>
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/#more" rel="contents">
@@ -567,6 +578,17 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zzr0427" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -619,6 +641,22 @@
 
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
 
         
       </div>

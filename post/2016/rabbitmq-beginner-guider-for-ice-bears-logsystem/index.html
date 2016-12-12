@@ -84,23 +84,23 @@
 
 
 
-<meta name="description" content="fanout exchange《Ice Bear都能懂的RabbitMQ入门教程（一）》中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不">
+<meta name="description" content="fanout exchange《Ice Bear都能懂的RabbitMQ (一) 》中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不同的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ice Bear都能懂的RabbitMQ (二)">
-<meta property="og:url" content="http://yoursite.com/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/index.html">
+<meta property="og:url" content="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/index.html">
 <meta property="og:site_name" content="skydream.Me">
-<meta property="og:description" content="fanout exchange《Ice Bear都能懂的RabbitMQ入门教程（一）》中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/two-consumer.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/fanout-exchange-list-queues.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/direct-exchange.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/direct-exchange-multiple.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/python-four.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/python-five.png">
-<meta property="og:updated_time" content="2016-12-12T08:27:03.172Z">
+<meta property="og:description" content="fanout exchange《Ice Bear都能懂的RabbitMQ (一) 》中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不同的">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/two-consumer.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/fanout-exchange-list-queues.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/direct-exchange.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/direct-exchange-multiple.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/python-four.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/python-five.png">
+<meta property="og:updated_time" content="2016-12-12T08:32:18.727Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ice Bear都能懂的RabbitMQ (二)">
-<meta name="twitter:description" content="fanout exchange《Ice Bear都能懂的RabbitMQ入门教程（一）》中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不">
-<meta name="twitter:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/two-consumer.png">
+<meta name="twitter:description" content="fanout exchange《Ice Bear都能懂的RabbitMQ (一) 》中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不同的">
+<meta name="twitter:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/two-consumer.png">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/"/>
+  <link rel="canonical" href="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/"/>
 
 
 
@@ -268,7 +268,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/">
+  <link itemprop="mainEntityOfPage" href="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-logsystem/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="zzr0427">
@@ -311,7 +311,17 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">Post modified</span>
+              <time title="Post modified" itemprop="dateModified" datetime="2016-12-12T16:32:18+08:00">
+                2016-12-12
+              </time>
             
           </span>
 
@@ -327,6 +337,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -341,9 +356,9 @@
       
 
       
-        <h2 id="fanout-exchange"><a href="#fanout-exchange" class="headerlink" title="fanout exchange"></a>fanout exchange</h2><p>《Ice Bear都能懂的RabbitMQ入门教程（一）》中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不同的consumer进行处理。如下所示：</p>
+        <h2 id="fanout-exchange"><a href="#fanout-exchange" class="headerlink" title="fanout exchange"></a>fanout exchange</h2><p><a href="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/">《Ice Bear都能懂的RabbitMQ (一) 》</a>中，task_queue所解决的问题是，一个message只能被一种consumer所接收。现在我们有了新的需求，我们需要一个日志系统，我们希望有两种consumer，一种consumer将日志输出到屏幕，另一种consumer写到disk。为了实现这个目的，我们希望message被投到两个queue中，交给不同的consumer进行处理。<a id="more"></a>如下所示：</p>
 <p><img src="/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/two-consumer.png" alt="two-consumer"></p>
-<a id="more"></a>
+<!-- more -->
 <p>对于producer，不再指定哪一个queue来接收消息，而是哪一个exchange来接收消息。exchange不保存信息，如果没有queue绑定在这个exchange上的话，消息就丢失了。代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># filename: emit_log.py</span></div><div class="line"><span class="comment"># !/usr/bin/env python</span></div><div class="line"><span class="keyword">import</span> pika</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line">connection = pika.BlockingConnection(pika.ConnectionParameters(</div><div class="line">    host=<span class="string">'localhost'</span>))</div><div class="line">channel = connection.channel()</div><div class="line">channel.exchange_declare(exchange=<span class="string">'logs'</span>,</div><div class="line">                         type=<span class="string">'fanout'</span>)</div><div class="line">message = <span class="string">' '</span>.join(sys.argv[<span class="number">1</span>:]) <span class="keyword">or</span> <span class="string">"info: Hello World!"</span></div><div class="line">channel.basic_publish(exchange=<span class="string">'logs'</span>,</div><div class="line">                      routing_key=<span class="string">''</span>,</div><div class="line">                      body=message)</div><div class="line">print(<span class="string">" [x] Sent %r"</span> % message)</div><div class="line">connection.close()</div></pre></td></tr></table></figure></p>
 <p>对于consumer，自己创建临时queue（<code>exclusive=True</code>，当这个consumer终止，这个queue就销毁），将这个queue接到exchange上，然后通过这个queue接收exchange发出的消息：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># filename: receive_logs.py</span></div><div class="line"><span class="comment"># !/usr/bin/env python</span></div><div class="line"><span class="keyword">import</span> pika</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">callback</span><span class="params">(ch, method, properties, body)</span>:</span></div><div class="line">    print(<span class="string">" [x] %r"</span> % body)</div><div class="line"></div><div class="line">connection = pika.BlockingConnection(pika.ConnectionParameters(</div><div class="line">    host=<span class="string">'localhost'</span>))</div><div class="line">channel = connection.channel()</div><div class="line">channel.exchange_declare(exchange=<span class="string">'logs'</span>,</div><div class="line">                         type=<span class="string">'fanout'</span>)</div><div class="line">result = channel.queue_declare(exclusive=<span class="keyword">True</span>)</div><div class="line">queue_name = result.method.queue</div><div class="line">channel.queue_bind(exchange=<span class="string">'logs'</span>,</div><div class="line">                   queue=queue_name)</div><div class="line"></div><div class="line">print(<span class="string">' [*] Waiting for logs. To exit press CTRL+C'</span>)</div><div class="line">channel.basic_consume(callback,</div><div class="line">                      queue=queue_name,</div><div class="line">                      no_ack=<span class="keyword">True</span>)</div><div class="line">channel.start_consuming()</div></pre></td></tr></table></figure></p>
 <p>如下图所示，每一个consumer都建了自己的临时queue，并与exchange进行了绑定：<br><img src="/images/posts/rabbitmq-beginner-guider-for-ice-bears-logsystem/fanout-exchange-list-queues.png" alt="fanout-exchange-list-queues"></p>
@@ -456,6 +471,29 @@
 
     <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
     </div>
   </div>
 
@@ -531,6 +569,17 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zzr0427" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -599,6 +648,22 @@
 
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
 
         
       </div>

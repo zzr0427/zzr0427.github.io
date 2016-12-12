@@ -84,41 +84,26 @@
 
 
 
-<meta name="description" content="在Openstack中，各个组件内部使用消息队列进行通信，其中，RabbitMQ是常用的一种开源消息代理软件。这里作一个简要介绍。
-RabbitMQ介绍RabbitMQ实现了高级消息队列协议（AMQP）。
-AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨在解决在两个应用之间传送消息存在的以下问题:
-
-网络是不可靠的 -&amp;gt; 消息需要保存后再转发并有出错处理机制
-与本地调">
+<meta name="description" content="在Openstack中，各个组件内部使用消息队列进行通信，其中，RabbitMQ是常用的一种开源消息代理软件。这里作一个简要介绍。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ice Bear都能懂的RabbitMQ (一)">
-<meta property="og:url" content="http://yoursite.com/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/index.html">
+<meta property="og:url" content="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/index.html">
 <meta property="og:site_name" content="skydream.Me">
-<meta property="og:description" content="在Openstack中，各个组件内部使用消息队列进行通信，其中，RabbitMQ是常用的一种开源消息代理软件。这里作一个简要介绍。
-RabbitMQ介绍RabbitMQ实现了高级消息队列协议（AMQP）。
-AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨在解决在两个应用之间传送消息存在的以下问题:
-
-网络是不可靠的 -&amp;gt; 消息需要保存后再转发并有出错处理机制
-与本地调">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/rabbitmq-basic-structure.jpg">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/rabbitmq-user-passwd.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/rabbitmq_management_ui.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/hello-world-example-routing.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/list_queue_hello.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/receive_hello_world.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/list_queue_unack.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/prefetch-count.png">
-<meta property="og:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/We-Bare-Bears-300.png">
-<meta property="og:updated_time" content="2016-12-12T07:53:57.307Z">
+<meta property="og:description" content="在Openstack中，各个组件内部使用消息队列进行通信，其中，RabbitMQ是常用的一种开源消息代理软件。这里作一个简要介绍。">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/rabbitmq-basic-structure.jpg">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/rabbitmq-user-passwd.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/rabbitmq_management_ui.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/hello-world-example-routing.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/list_queue_hello.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/receive_hello_world.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/list_queue_unack.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/prefetch-count.png">
+<meta property="og:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/We-Bare-Bears-300.png">
+<meta property="og:updated_time" content="2016-12-12T08:32:53.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ice Bear都能懂的RabbitMQ (一)">
-<meta name="twitter:description" content="在Openstack中，各个组件内部使用消息队列进行通信，其中，RabbitMQ是常用的一种开源消息代理软件。这里作一个简要介绍。
-RabbitMQ介绍RabbitMQ实现了高级消息队列协议（AMQP）。
-AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨在解决在两个应用之间传送消息存在的以下问题:
-
-网络是不可靠的 -&amp;gt; 消息需要保存后再转发并有出错处理机制
-与本地调">
-<meta name="twitter:image" content="http://yoursite.com/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/rabbitmq-basic-structure.jpg">
+<meta name="twitter:description" content="在Openstack中，各个组件内部使用消息队列进行通信，其中，RabbitMQ是常用的一种开源消息代理软件。这里作一个简要介绍。">
+<meta name="twitter:image" content="http://skydream.me/images/posts/rabbitmq-beginner-guider-for-ice-bears-helloworld/rabbitmq-basic-structure.jpg">
 
 
 
@@ -146,7 +131,7 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
 
 
 
-  <link rel="canonical" href="http://yoursite.com/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/"/>
+  <link rel="canonical" href="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/"/>
 
 
 
@@ -286,7 +271,7 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/">
+  <link itemprop="mainEntityOfPage" href="http://skydream.me/post/2016/rabbitmq-beginner-guider-for-ice-bears-helloworld/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="zzr0427">
@@ -329,7 +314,17 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              <span class="post-meta-item-text">Post modified</span>
+              <time title="Post modified" itemprop="dateModified" datetime="2016-12-12T16:32:53+08:00">
+                2016-12-12
+              </time>
             
           </span>
 
@@ -344,6 +339,11 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -360,6 +360,7 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
 
       
         <p>在Openstack中，各个组件内部使用消息队列进行通信，其中，RabbitMQ是常用的一种开源消息代理软件。这里作一个简要介绍。</p>
+<a id="more"></a>
 <h2 id="RabbitMQ介绍"><a href="#RabbitMQ介绍" class="headerlink" title="RabbitMQ介绍"></a>RabbitMQ介绍</h2><p>RabbitMQ实现了高级消息队列协议（AMQP）。</p>
 <h3 id="AMQP"><a href="#AMQP" class="headerlink" title="AMQP"></a>AMQP</h3><p>AMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨在解决在两个应用之间传送消息存在的以下问题:</p>
 <ul>
@@ -368,7 +369,6 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
 <li>应用之间是不同的(比如实现语言不同, 操作系统不同)，且应用会经常变化 -&gt; 得与应用无关</li>
 </ul>
 <p>AMQP 使用异步的、应用对应用的、二进制数据通信来解决这些问题。</p>
-<a id="more"></a>
 <h3 id="基本组件"><a href="#基本组件" class="headerlink" title="基本组件"></a>基本组件</h3><p>RabbitMQ 是 AMQP 的一种实现, 其基本组件包括：</p>
 <ul>
 <li>Producer：Message的生产者, 负责产生消息并把消息发到Exchange。</li>
@@ -507,6 +507,29 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
 
     <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
     </div>
   </div>
 
@@ -582,6 +605,17 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/zzr0427" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -650,6 +684,22 @@ AMQPAMQP是一个定义了应用之间消息传送协议的开放标准. AMQP旨
 
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
 
         
       </div>
